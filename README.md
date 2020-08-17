@@ -1,5 +1,8 @@
 # benfordslaw
 
+[![Build Status](https://cloud.drone.io/api/badges/CMiksche/benfordslaw/status.svg)](https://cloud.drone.io/CMiksche/benfordslaw)
+[![npm version](https://badge.fury.io/js/benfordslaw.svg)](https://badge.fury.io/js/benfordslaw)
+![npm](https://img.shields.io/npm/dm/benfordslaw)
 ![Coverage Branches](./coverage/badge-branches.png)
 ![Coverage Lines](./coverage/badge-lines.png)
 ![Coverage Functions](./coverage/badge-functions.png)
