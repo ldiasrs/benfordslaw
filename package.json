@@ -1,7 +1,7 @@
 {
   "name": "benfordslaw",
   "version": "0.0.1",
-  "description": "Check if a number series confirm to the Benford's Law",
+  "description": "Check if a number array confirms to the Benford's Law",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -16,11 +16,7 @@
     "url": "https://github.com/CMiksche/benfordslaw.git"
   },
   "author": "Christoph Miksche",
-  "license": "SEE LICENSE IN LICENSE",
-  "private": true,
-  "publishConfig": {
-    "registry": "http://192.168.105.100:4873"
-  },
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -41,5 +37,8 @@
       "pre-commit": "npm run coverage:badges && git add coverage/*",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "chi-squared-test": "^1.1.0"
   }
 }
