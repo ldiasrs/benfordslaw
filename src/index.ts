@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const chiSqTest = require("chi-squared-test");
 
 interface Result {
@@ -36,11 +37,11 @@ export class BenfordsLaw {
         this.result = chiSqTest(dist, this.benfords, 1);
     }
 
-    public getChiSquared() {
+    public getChiSquared(): number | null {
         return this.result.chiSquared;
     }
 
-    public getProbability() {
+    public getProbability(): number | null {
         return this.result.probability;
     }
 
