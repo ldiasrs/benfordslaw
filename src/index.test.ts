@@ -11,6 +11,17 @@ test('test the distribution of 1,2,3,4,5,6,7,8,9', () => {
     expect(probability).toBe("0.99994");
 })
 
+test('test the distribution of 9,8,7,6,5,4,3,2,1', () => {
+    const numbers = [9,8,7,6,5,4,3,2,1];
+    const benfords = new BenfordsLaw(numbers);
+
+    const chiSquared = benfords.getChiSquared();
+    const probability = benfords.getProbability()?.toFixed(5);
+
+    expect(chiSquared).toBe(0.40105320411553363);
+    expect(probability).toBe("0.99994");
+})
+
 test('test the distribution of a bigger array', () => {
     const numbers = [1, 1, 1, 1, 1, 1, 1, 1, 
         2, 2, 2, 2,
