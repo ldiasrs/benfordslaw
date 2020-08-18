@@ -31,7 +31,7 @@ export class BenfordsLaw {
     constructor(numbers: Array<number>) {
         const occurrences = this.countOccurrences(this.firstDigit(numbers));
         this.dist = this.countDistribution(occurrences)
-        this.result = chiSqTest(this.dist, this.benfords, 1);
+        this.result = chiSqTest(this.dist, this.benfords, 0);
     }
 
     /**

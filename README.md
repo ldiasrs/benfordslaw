@@ -29,8 +29,8 @@ E.g.:
 
     const chiSquared = benfords.getChiSquared();
     // chiSquared = 0.40105320411553363
-    const probability = benfords.getProbability()?.toFixed(5);
-    // probability = 0.99994
+    const probability = benfords.getProbability()?.toFixed(1);
+    // probability = 1.0
 
 The ChiSquared result is a float between 0 and 1 and describes how well Benford's Law was matched. Lower is better.
 
