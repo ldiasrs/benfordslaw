@@ -10,5 +10,10 @@
       "esModuleInterop": true,
       "rootDir": "src",
       "outDir": "dist"
-    }
+    },
+    "exclude": [
+      "./src/*.test.ts",
+      "coverage",
+      "node_modules"
+    ],
   }

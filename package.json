@@ -1,6 +1,6 @@
 {
   "name": "benfordslaw",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Check if a number array confirms to the Benford's Law",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,8 @@
     "coverage:badges": "npm run coverage && jest-coverage-badges && npm run coverage:badges-to-png",
     "coverage:badges-to-png": "npx svpng ./coverage/badge-branches.svg ./coverage/badge-branches.png && npx svpng ./coverage/badge-functions.svg ./coverage/badge-functions.png && npx svpng ./coverage/badge-lines.svg ./coverage/badge-lines.png && npx svpng ./coverage/badge-statements.svg ./coverage/badge-statements.png",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
-    "build" : "tsc"
+    "build": "tsc",
+    "publish": "npm run build && npm login && npm publish"
   },
   "repository": {
     "type": "git",

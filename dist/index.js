@@ -23,19 +23,15 @@ class BenfordsLaw {
             terms: null
         };
         const occurrences = this.countOccurrences(this.firstDigit(numbers));
-        // No leading zeroes
-        if (0 in occurrences.keys) {
-            occurrences.delete(0);
-        }
-        const dist = this.countDistribution(occurrences);
-        this.result = chiSqTest(dist, this.benfords, 1);
+        this.dist = this.countDistribution(occurrences);
+        this.result = chiSqTest(this.dist, this.benfords, 1);
     }
-    getChiSquared() {
-        return this.result.chiSquared;
-    }
-    getProbability() {
-        return this.result.probability;
-    }
+    /**
+     * Only return the first digit of every number but no zeroes
+     *
+     * @param numbers       The numbers which should be filtered
+     * @returns             Array of numbers with only the first digit and without zeroes
+     */
     firstDigit(numbers) {
         numbers.forEach((number) => {
             while (number >= 10) {
@@ -43,7 +39,7 @@ class BenfordsLaw {
             }
             return Math.trunc(number);
         });
-        return numbers;
+        return numbers.filter((n) => n != 0).sort(); // filter 0 from numbers
     }
     /**
      * Count the occurrences of every number in a array
@@ -54,6 +50,12 @@ class BenfordsLaw {
     countOccurrences(numbers) {
         return numbers.reduce((a, b) => a.set(b, a.get(b) + 1 || 1), new Map);
     }
+    /**
+     * Get the distribution of 1 to 9 in the number array
+     *
+     * @param occurrences               A map with the occurrences of every number in a array
+     * @returns Array<number>           The distribution of the numbers
+     */
     countDistribution(occurrences) {
         let sum = 0;
         const res = [];
@@ -64,6 +66,18 @@ class BenfordsLaw {
             res.push(value / sum);
         });
         return res;
+    }
+    getChiSquared() {
+        return this.result.chiSquared;
+    }
+    getProbability() {
+        return this.result.probability;
+    }
+    getTerms() {
+        return this.result.terms;
+    }
+    getDist() {
+        return this.dist;
     }
 }
 exports.BenfordsLaw = BenfordsLaw;

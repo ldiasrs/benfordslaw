@@ -36,6 +36,8 @@ The ChiSquared result is a float between 0 and 1 and describes how well Benford'
 
 The Probability describes how relevant ChiSquared is. It should be >= 0.9
 
+getDist() returns the distribution of the numbers.
+
 ## Why TypeScript
 
 With Types TypeScript adds a extra layer of security. I also use mainly TypeScript projects with this project so TypeScript just makes sense.
