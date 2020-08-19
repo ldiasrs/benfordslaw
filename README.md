@@ -32,7 +32,7 @@ E.g.:
     const probability = benfords.getProbability()?.toFixed(1);
     // probability = 1.0
 
-The ChiSquared result is a float between 0 and 1 and describes how well Benford's Law was matched. Lower is better.
+The ChiSquared result is a float and describes how well Benford's Law was matched. Lower is better.
 
 The Probability describes how relevant ChiSquared is. It should be >= 0.9
 
