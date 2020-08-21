@@ -24,7 +24,7 @@ class BenfordsLaw {
         };
         const occurrences = this.countOccurrences(this.firstDigit(numbers));
         this.dist = this.countDistribution(occurrences);
-        this.result = chiSqTest(this.dist, this.benfords, 1);
+        this.result = chiSqTest(this.dist, this.benfords, 0);
     }
     /**
      * Only return the first digit of every number but no zeroes
@@ -33,13 +33,14 @@ class BenfordsLaw {
      * @returns             Array of numbers with only the first digit and without zeroes
      */
     firstDigit(numbers) {
+        const num = [];
         numbers.forEach((number) => {
             while (number >= 10) {
                 number = Math.floor(number / 10);
             }
-            return Math.trunc(number);
+            num.push(Math.trunc(number));
         });
-        return numbers.filter((n) => n != 0).sort(); // filter 0 from numbers
+        return num.filter((n) => n != 0).sort(); // filter 0 from numbers
     }
     /**
      * Count the occurrences of every number in a array

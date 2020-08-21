@@ -1,6 +1,6 @@
 {
   "name": "benfordslaw",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Check if a number array confirms to the Benford's Law",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

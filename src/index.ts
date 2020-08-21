@@ -41,13 +41,14 @@ export class BenfordsLaw {
      * @returns             Array of numbers with only the first digit and without zeroes
      */
     private firstDigit(numbers: Array<number>): Array<number> {
+        const num: Array<number> = [];
         numbers.forEach((number) => {
             while(number >= 10) {
                 number = Math.floor(number/10)
             }
-            return Math.trunc(number)
+            num.push(Math.trunc(number))
         })
-        return numbers.filter((n) => n != 0).sort() // filter 0 from numbers
+        return num.filter((n) => n != 0).sort() // filter 0 from numbers
     }
 
     /**
