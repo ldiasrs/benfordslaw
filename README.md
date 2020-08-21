@@ -48,3 +48,7 @@ And TS also compiles to JavaScript Code so JS projects also can use it.
 License: MIT
 
 Author: Christoph Daniel Miksche
+
+## See also
+
+https://github.com/CMiksche/benford A Go Package implementation of this benford's law check
