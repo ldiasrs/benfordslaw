@@ -10,8 +10,9 @@
     "coverage:badges": "npm run coverage && jest-coverage-badges && npm run coverage:badges-to-png",
     "coverage:badges-to-png": "npx svpng ./coverage/badge-branches.svg ./coverage/badge-branches.png && npx svpng ./coverage/badge-functions.svg ./coverage/badge-functions.png && npx svpng ./coverage/badge-lines.svg ./coverage/badge-lines.png && npx svpng ./coverage/badge-statements.svg ./coverage/badge-statements.png",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "tsc",
-    "do-publish": "rm -rf dist/ && npm run build && npm login && npm publish"
+    "min": "npx terser dist\\index.js -c -o dist/index.js",
+    "build": "rm -rf dist/ && tsc && npm run min",
+    "do-publish": "npm run build && npm login && npm publish"
   },
   "repository": {
     "type": "git",
