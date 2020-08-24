@@ -51,4 +51,5 @@ Author: Christoph Daniel Miksche
 
 ## See also
 
-https://github.com/CMiksche/benford A Go Package implementation of this benford's law check
+* https://github.com/CMiksche/benford A Go Package implementation of this benford's law check
+* https://github.com/CMiksche/benfordslaw.cr A Crystal implementation of this benford's law check
