@@ -22,15 +22,17 @@ Look at the tests for good examples.
 
 E.g.:
 
-    import { BenfordsLaw } from 'benfordslaw';
+````typescript
+import { BenfordsLaw } from 'benfordslaw';
 
-    const numbers = [1,2,3,4,5,6,7,8,9];
-    const benfords = new BenfordsLaw(numbers);
+const numbers = [1,2,3,4,5,6,7,8,9];
+const benfords = new BenfordsLaw(numbers);
 
-    const chiSquared = benfords.getChiSquared();
-    // chiSquared = 0.40105320411553363
-    const probability = benfords.getProbability()?.toFixed(1);
-    // probability = 1.0
+const chiSquared = benfords.getChiSquared();
+// chiSquared = 0.40105320411553363
+const probability = benfords.getProbability()?.toFixed(1);
+// probability = 1.0
+````
 
 The ChiSquared result is a float and describes how well Benford's Law was matched. Lower is better.
 
