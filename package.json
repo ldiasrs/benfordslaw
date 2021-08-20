@@ -8,6 +8,7 @@
     "/dist"
   ],
   "scripts": {
+    "local" : "rm -rf dist && tsc && node dist/popuplacao-cidades-SC.js",
     "test": "jest",
     "coverage": "rm -rf coverage/ && npx jest --coverage",
     "coverage:badges": "npm run coverage && jest-coverage-badges && npm run coverage:badges-to-png",
